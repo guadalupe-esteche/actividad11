@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        /* INTRODUCCION
+        document.write('Mi nombre es Guada <br> Tengo 20<br>');
+        */
+
+        /* VARIABLES
+        let nombreEmpleado = 'Sebastian';
+        let edad = 1000000;
+        document.write(nombreEmpleado);
+        document.write('<br>');
+        document.write(edad);
+        document.write('<br>');
+        */
+
+        /* ENTRADA DE DATOS POR TECLADO
+        let nombreUsuario;
+        let email;
+        nombreUsuario = prompt ('Ingresa tu nombre');
+        email = prompt ('Ingresa tu email');
+        document.write ('Hola ' + nombreUsuario + ' tu email es: ' + email +'<br>');
+        */
+
+        /* ESTRUCTURAS SECUENCIALES DE PROGRAMACION
+         let valor1;
+         let valor2 = 4;
+         valor1 = prompt('Ingresa un numero')
+         let perimetro = parseInt(valor1) * parseInt(valor2);
+         document.write('El perimetro de un cuadrado de lados con valor '+ valor1 + ' es: ' + perimetro);
+         */
+
+        /*
+        let valor1, valor2, valor3, valor4;
+        valor1 = prompt ('Ingresa el primer numero');
+        valor2 = prompt ('Ingresa el segundo numero');
+        valor3 = prompt ('Ingresa el tercer numero');
+        valor4 = prompt ('Ingresa el cuarto numero');
+        let suma = parseInt(valor1) + parseInt(valor2);
+        let producto = parseInt(valor3) * parseInt(valor4);
+        document.write('La suma del primer y segundo numero es de: ' + suma + '<br>');
+        document.write('El producto del tercer y cuarto numero es de: ' + producto);
+        */
+
+        /*
+        let valor1, valor2, valor3, valor4;
+        valor1 = prompt ('Ingresa el primer numero');
+        valor2 = prompt ('Ingresa el segundo numero');
+        valor3 = prompt ('Ingresa el tercer numero');
+        valor4 = prompt ('Ingresa el cuarto numero');
+        let suma = parseInt(valor1) + parseInt(valor2) + parseInt(valor3) + parseInt(valor4);
+        let producto = parseInt(valor1) * parseInt(valor2) * parseInt(valor3) * parseInt(valor4);
+        document.write('La suma de los numeros es de: ' + suma + '<br>');
+        document.write('El producto de los numeros es de: ' + producto);
+        */
+
+        /*
+        let precio;
+        let cantidad;
+        precio = prompt('Ingrese el precio del articulo');
+        cantidad = prompt('Ingrese la cantidad a llevar');
+        precioFinal = parseInt(precio) * parseInt(cantidad);
+        document.write("El precio final a abonar es: " + precioFinal)
+        */
+
+        /* ESTRUCTURAS CONDICIONALES SIMPLES
+        let nota1, nota2, nota3;
+        nota1 = parseInt(prompt('Ingrese la primer nota'));
+        nota2 = parseInt(prompt('Ingrese la segunda nota'));
+        nota3 = parseInt(prompt('Ingrese la tercera nota'));
+        let suma = nota1 + nota2 + nota3;
+        let promedio = suma / 3;
+         if (promedio >= 7) {
+            document.write('PROMOCIONADOOO')
+         }
+        */
+
+        /* ESTRUCTURAS CONDICIONALES COMPUESTAS
+        let valor1, valor2;
+        valor1 = parseInt(prompt('Ingrese el primer valor'));
+        valor2 = parseInt(prompt('Ingrese el segundo valor'));
+        if (valor1 > valor2){
+            let suma = valor1 + valor2;
+            let diferencia = valor1 - valor2;
+            document.write('La suma de los valores es de: ' +suma + ', y la diferencia es: ' +diferencia);
+        }
+        else {
+            let producto = valor1 * valor2;
+            let division = valor1 / valor2;
+            document.write('El producto de los valores es de: ' +producto+ ', y la division del primero con respecto al segundo es de: ' +division);
+        }
+        */
+
+        /* ESTRUCTURA CONDICIONALES ANIDADAS
+        let valor1, valor2, valor3;
+        valor1 = parseInt(prompt('Ingrese el primer valor'));
+        valor2 = parseInt(prompt('Ingrese el segundo valor'));
+        valor3 = parseInt(prompt('Ingrese el tercer valor'));
+        if (valor1 > valor2 ) {
+            if (valor1 > valor3) {
+                document.write('El mayor valor es: ' +valor1)
+            }
+        }
+        else {
+            if (valor2 > valor3) {
+                document.write('El mayor valor es: '+valor2)
+            }
+            else {
+                document.write('El mayor valor es: '+valor3)
+            }
+        }
+        */
+
+        /* OPERADOR LOGICO && EN ESTRUCTURAS CONDICIONALES
+        let dia, mes, año;
+        dia = parseInt(prompt('Ingrese un dia en numeros'));
+        mes = parseInt(prompt('Ingrese un mes en numeros'));
+        año = parseInt(prompt('Ingrese un año en numeros'));
+
+        if ( dia == 25 && mes == 12) {
+            document.write('La fecha corresponde a Navidad');
+        }
+        else {
+            document.write('No es Navidad');
+        }
+        */
+
+        /* OPERADOR LOGICO || EN ESTRUCTURAS CONDICIONALES
+        let valor1, valor2, valor3;
+        valor1 = parseInt(prompt('Ingrese el primer valor'));
+        valor2 = parseInt(prompt('Ingrese el segundo valor'));
+        valor3 = parseInt(prompt('Ingrese el tercer valor'));
+
+        if (valor1 < 10|| valor2 < 10 || valor3 <10) {
+            document.write('Alguno uno de los valores es menor a 10');
+        }
+        else {
+            document.write('Ninguno de los valores es menor a 10');
+        }
+        */
+
+        /* SWITCH
+        let palabra;
+        palabra = prompt('Ingrese alguna de estas palabras: casa, mesa, perro, gato');
+
+        switch (palabra) {
+            case 'casa':
+                document.write('house');
+            break
+            case 'mesa':
+                document.write('table');
+            break
+            case 'perro':
+                document.write('dog');
+            break
+            case 'gato':
+                document.write('cat');
+            break
+            default:
+                document.write('La palabra que ingresada no es correcta')
+        }
+        */
+        /* WHILE
+        let valor = 11;
+         let contador = 0;
+ 
+         while (contador < 25) {
+             document.write('valor: ' + contador + ' es: ' + valor + '<br>');
+             contador++;
+             valor = valor + 11;
+         }
+         */
+    </script>
+
+</body>
+
+</html>
