@@ -32,12 +32,12 @@
         */
 
         /* ESTRUCTURAS SECUENCIALES DE PROGRAMACION
-         let valor1;
-         let valor2 = 4;
-         valor1 = prompt('Ingresa un numero')
-         let perimetro = parseInt(valor1) * parseInt(valor2);
-         document.write('El perimetro de un cuadrado de lados con valor '+ valor1 + ' es: ' + perimetro);
-         */
+        let valor1;
+        let valor2 = 4;
+        valor1 = prompt('Ingresa un numero')
+        let perimetro = parseInt(valor1) * parseInt(valor2);
+        document.write('El perimetro de un cuadrado de lados con valor '+ valor1 + ' es: ' + perimetro);
+        */
 
         /*
         let valor1, valor2, valor3, valor4;
@@ -171,14 +171,64 @@
         */
         /* WHILE
         let valor = 11;
-         let contador = 0;
+        let contador = 0;
  
-         while (contador < 25) {
-             document.write('valor: ' + contador + ' es: ' + valor + '<br>');
-             contador++;
-             valor = valor + 11;
-         }
-         */
+        while (contador < 25) {
+            document.write('valor: ' + contador + ' es: ' + valor + '<br>');
+            contador++;
+            valor = valor + 11;
+        }
+        */
+
+        /* ACUMULADOR
+        let valor;
+        let x = 1;
+        let suma = 0;
+        while (x <= 5) {
+            valor = parseInt(prompt('Ingrese altura en cm de la persona'));
+            suma = suma + valor;
+            x ++;
+        }
+        let promedio = suma / 5;
+        document.write('El promedio de alturas es de: ' + promedio + ' cm');
+        */
+
+        /* DO WHILE 
+        do {
+            nroCuenta = parseInt(prompt('Ingrese el numero de cuenta'));
+            if (nroCuenta >= 0) {
+                nombreCliente = prompt('Ingrese el nombre del cliente');
+                saldoActual = parseInt(prompt('Ingrese el saldo actual de la cuenta'));
+                if (saldoActual > 0) {
+                    document.write('Nro. cuenta: ' + nroCuenta + '<br>' + 'Nombre del cliente: ' + nombreCliente + '<br>' + 'Estado de la cuenta: Acreedor')
+                }
+                else if (saldoActual < 0) {
+                    document.write('Nro. cuenta: ' + nroCuenta + '<br>' + 'Nombre del cliente: ' + nombreCliente + '<br>' + 'Estado de la cuenta: Deudor')
+                }
+                else {
+                    document.write('Nro. cuenta: ' + nroCuenta + '<br>' + 'Nombre del cliente: ' + nombreCliente + '<br>' + 'Estado de la cuenta: Nulo')
+                }
+            }
+        }
+        while (nroCuenta >= 0)
+        */
+
+        /* FUNCIONES CON PARÁMETROS
+        function ordenar(n1, n2, n3) {
+            if (n1 < n2 && n1 < n3) {
+                document.write("El menor número es: " + n1);
+            } else if (n2 < n1 && n2 < n3) {
+                document.write("El menor número es: " + n2);
+            } else {
+                document.write("El menor número es: " + n3);
+            }
+        }
+
+        let valor1 = parseInt(prompt('Ingrese el primer valor'));
+        let valor2 = parseInt(prompt('Ingrese el segundo valor'));
+        let valor3 = parseInt(prompt('Ingrese el tercer valor'));
+        ordenar(valor1, valor2, valor3);
+        */
     </script>
 
 </body>
