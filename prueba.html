@@ -229,6 +229,50 @@
         let valor3 = parseInt(prompt('Ingrese el tercer valor'));
         ordenar(valor1, valor2, valor3);
         */
+
+        /* CLASE ARRAY 
+        function cargar(valor) {
+            for (let x = 0; x < valor.length; x++) {
+                let v = prompt('Ingrese valor: ' + x);
+                valor[x] = parseInt(v);
+            }
+        }
+
+        function valorAcumulado(valor) {
+            let suma = 0;
+            for (let x = 0; x < valor.length; x++) {
+                suma = suma + valor[x]
+            }
+            document.write('Valor acumulado del array: ' + suma + '<br>');
+        }
+
+        function valorMay36(valor) {
+            let suma = 0
+            for (let x = 0; x < valor.length; x++) {
+                if (valor[x] > 36) {
+                    suma = suma + valor[x]
+                }
+            }
+            document.write('Valor acumulado de elementos mayores a 36: ' + suma + '<br>');
+        }
+
+        function valorMay50(valor) {
+            let suma = 0
+            for (let x = 0; x < valor.length; x++) {
+                if (valor[x] > 50) {
+                    suma = suma + valor[x]
+                }
+            }
+            document.write('Valor acumulado de elementos mayores a 50: ' + suma + '<br>');
+        }
+
+        let valor;
+        valor = new Array(8);
+        cargar(valor);
+        valorAcumulado(valor);
+        valorMay36(valor);
+        valorMay50(valor);
+        */
     </script>
 
 </body>
