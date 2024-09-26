@@ -193,7 +193,7 @@
         document.write('El promedio de alturas es de: ' + promedio + ' cm');
         */
 
-        /* DO WHILE 
+        /* DO WHILE
         do {
             nroCuenta = parseInt(prompt('Ingrese el numero de cuenta'));
             if (nroCuenta >= 0) {
@@ -213,7 +213,7 @@
         while (nroCuenta >= 0)
         */
 
-        /* FOR 
+        /* FOR
         let numero = 5
         for (let f = 1; f <= 10; f++) {
             let resultado = numero * f
@@ -312,8 +312,135 @@
         valorMay36(valor);
         valorMay50(valor);
         */
+
+        /* CLASE MATH
+        numero = parseInt(prompt('Ingrese un numero para calcular su raiz cuadrada:'))
+
+        if (numero >= 0) {
+            let raizCuadrada = Math.sqrt(numero);
+            document.write('La raíz cuadrada de ' + numero + ' es: ' + raizCuadrada);
+        } else {
+            document.write ('No es posible calcular la raiz cuadrada de un numero negativo');
+        } 
+
+        numero = parseInt(prompt('Ingrese un numero para calcular su tercera potencia:'))
+        let terceraPotencia = Math.pow(numero,3)
+        document.write('El numero ' + numero + ' elevado a la tercera potencia es: ' + terceraPotencia);
+        */
+
+        /* CLASE STRING */
+
     </script>
 
+    <form>
+        <input type="button" onClick="mensaje1()" value="Boton 1">
+        <input type="button" onClick="mensaje2()" value="Boton 2">
+        <input type="button" onClick="mensaje3()" value="Boton 3">
+    </form>
+
+    <form>
+        <p>Ingrese un valor:<input type="text" id="num"></p>
+        <p><input type="button" value="Calcular cubo" onClick="calcularCubo()"></p>
+    </form>
+
+    <form>
+        Ingrese clave:
+        <input type="password" id="clave1">
+        <br> Repita la clave:
+        <input type="password" id="clave2">
+        <br>
+        <input type="button" value="Verificar clave" onClick="verificar()">
+    </form>
+
+    <form>
+        <p>Pizzas:</p>
+        <p><select id="pizza" onChange="mostrarTiposPizzas()">
+                <option value="180">Jamon y Queso</option>
+                <option value="150">Muzzarella</option>
+                <option value="170">Morrones</option>
+            </select></p>
+        <p><input type="text" id="mensaje"></p>
+    </form>
+
+    <form>
+        Seleccione los deportes que practica:<br>
+        <input type="checkbox" id="checkbox1">Fútbol<br>
+        <input type="checkbox" id="checkbox2">Básquet<br>
+        <input type="checkbox" id="checkbox3">Tenis<br>
+        <input type="button" value="Controlar" onClick="verificar()">
+    </form>
+
+    <form>
+        <p>¿Eses mayor de edad?</p>
+        <p><input type="radio" id="radio1" name="edad">si</p>
+        <p><input type="radio" id="radio2" name="edad">no</p>
+        <p><input type="button" value="Verificar" onClick="verificar()"></p>
+    </form>
+
+    <script>
+        /* FORMULARIOS Y EVENTOS */
+        function mensaje1() {
+            alert('Se presionó el botón 1');
+        }
+
+        function mensaje2() {
+            alert('Se presionó el botón 2');
+        }
+
+        function mensaje3() {
+            alert('Se presionó el botón 3');
+        }
+
+        /* CONTROLES FORM, BUTTON Y TEXT*/
+        function calcularCubo() {
+            let valor = document.getElementById('num').value;
+            valor = parseInt(valor);
+            let cubo = valor * valor * valor;
+            alert(cubo);
+        }
+
+        /* CONTROL PASSWORD */
+        function verificar() {
+            let clave1 = document.getElementById('clave1').value;
+            let clave2 = document.getElementById('clave2').value;
+            if (clave1 == clave2) {
+                alert('Las claves ingresadas son iguales');
+            } else {
+                alert('Las claves ingresadas son distintas');
+            }
+        }
+
+        /* CONTROL SELECT */
+        function mostrarTiposPizzas() {
+            document.getElementById('mensaje').value =
+                document.getElementById('pizza').options[document.getElementById('pizza').selectedIndex].value;
+        }
+
+        /* CONTROL CHECKBOX */
+        function verificar() {
+            let deportes = '';
+            if (document.getElementById("checkbox1").checked) {
+                deportes = deportes + 'Fútbol ';
+            }
+            if (document.getElementById("checkbox2").checked) {
+                deportes = deportes + 'Básquet ';
+            }
+            if (document.getElementById("checkbox3").checked) {
+                deportes = deportes + 'Tenis';
+            }
+            alert('Los deportes seleccionados son: ' + deportes);
+        }
+
+        /* CONTROL RADIO */
+        function verificar() {
+            if (document.getElementById('radio1').checked) {
+                alert('Eres mayor de edad y por lo tanto puedes ingresar');
+            }
+            if (document.getElementById('radio2').checked) {
+                alert('No eres mayor de edad y por lo tanto no puedes ingresar');
+            }
+        }
+    </script>
 </body>
 
 </html>
