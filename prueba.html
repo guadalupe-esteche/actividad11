@@ -200,17 +200,56 @@
                 nombreCliente = prompt('Ingrese el nombre del cliente');
                 saldoActual = parseInt(prompt('Ingrese el saldo actual de la cuenta'));
                 if (saldoActual > 0) {
-                    document.write('Nro. cuenta: ' + nroCuenta + '<br>' + 'Nombre del cliente: ' + nombreCliente + '<br>' + 'Estado de la cuenta: Acreedor')
+                    document.write('Nro. cuenta: ' + nroCuenta + '<br>' + 'Nombre del cliente: ' + nombreCliente + '<br>' + 'Estado de la cuenta: Acreedor' + '<br>')
                 }
                 else if (saldoActual < 0) {
-                    document.write('Nro. cuenta: ' + nroCuenta + '<br>' + 'Nombre del cliente: ' + nombreCliente + '<br>' + 'Estado de la cuenta: Deudor')
+                    document.write('Nro. cuenta: ' + nroCuenta + '<br>' + 'Nombre del cliente: ' + nombreCliente + '<br>' + 'Estado de la cuenta: Deudor' + '<br>')
                 }
                 else {
-                    document.write('Nro. cuenta: ' + nroCuenta + '<br>' + 'Nombre del cliente: ' + nombreCliente + '<br>' + 'Estado de la cuenta: Nulo')
+                    document.write('Nro. cuenta: ' + nroCuenta + '<br>' + 'Nombre del cliente: ' + nombreCliente + '<br>' + 'Estado de la cuenta: Nulo' + '<br>')
                 }
             }
         }
         while (nroCuenta >= 0)
+        */
+
+        /* FOR 
+        let numero = 5
+        for (let f = 1; f <= 10; f++) {
+            let resultado = numero * f
+            document.write(resultado + " ");
+        }
+
+        numero = parseInt(prompt("Ingrese un numero: "))
+        for (let f = 1; f <= 12; f++) {
+            let resultado = numero * f
+            document.write(resultado + " ");
+        }
+
+        let nrosNegativos = 0;
+        let nrosPositivos = 0;
+        let nrosMultiplos15 = 0;
+        let sumaNumerosPares = 0;
+        for (let f = 1; f <= 10; f++) {
+            numero = parseInt(prompt('Ingrese 10 valores'))
+            if (numero < 0) {
+                nrosNegativos++;
+            }
+
+            if (numero > 0) {
+                nrosPositivos++;
+            }
+
+            if (numero % 15 === 0) {
+                nrosMultiplos15++;  // Incrementamos el contador de múltiplos de 15
+            }
+
+            // Verificamos si el número es par
+            if (numero % 2 === 0) {
+                sumaNumerosPares += numero;  // Sumamos el número a la variable acumuladora si es par
+            }
+        }
+        document.write("Numeros negativos ingresados: " + nrosNegativos + "<br>" + "Numeros positivos ingresados: " + nrosPositivos + "<br>" + "Numeros multiplos de 15: " + nrosMultiplos15 + "<br>" + "Suma de numeros pares: " + sumaNumerosPares);
         */
 
         /* FUNCIONES CON PARÁMETROS
@@ -230,7 +269,7 @@
         ordenar(valor1, valor2, valor3);
         */
 
-        /* CLASE ARRAY 
+        /* CLASE ARRAY
         function cargar(valor) {
             for (let x = 0; x < valor.length; x++) {
                 let v = prompt('Ingrese valor: ' + x);
