@@ -371,11 +371,41 @@
     </form>
 
     <form>
-        <p>¿Eses mayor de edad?</p>
+        <p>¿Eres mayor de edad?</p>
         <p><input type="radio" id="radio1" name="edad">si</p>
         <p><input type="radio" id="radio2" name="edad">no</p>
         <p><input type="button" value="Verificar" onClick="verificar()"></p>
     </form>
+
+    <form>
+        Ingrese nombre:
+        <input type="text" id="nombre"><br> Ingrese su mail:
+        <input type="text" id="mail"><br> Comentarios:
+        <br>
+        <textarea id="comentarios" rows="20" cols="100"></textarea><br>
+        <input type="button" value="confirmar" onClick="verificar()">
+    </form>
+
+    <form>
+        Ingrese su nombre de usuario:
+        <input type="text" id="usuario"><br> Ingrese su clave:
+        <input type="password" id="clave" onBlur="verificar(this)"><br>
+        <input type="button" value="confirmar">
+    </form>
+
+    <table border="1"></table>
+        <tr>
+            <td onMouseOver="pintar(this,'#4c2a94')" onMouseOut="pintar(this,'#ff9300')">
+                <a href="http://www.outlook.com">Outlook</a>
+            </td>
+            <td onMouseOver="pintar(this,'#03c4fe')" onMouseOut="pintar(this,'#ff9300')">
+                <a href="http://www.yahoo.com">Yahoo</a>
+            </td>
+            <td onMouseOver="pintar(this,'#e6298c')" onMouseOut="pintar(this,'#ff9300')">
+                <a href="http://www.gmail.com">GMail</a>
+            </td>
+        </tr>
+    </table>
 
     <script>
         /* FORMULARIOS Y EVENTOS */
@@ -416,7 +446,7 @@
                 document.getElementById('pizza').options[document.getElementById('pizza').selectedIndex].value;
         }
 
-        /* CONTROL CHECKBOX */
+        /* CONTROL CHECKBOX
         function verificar() {
             let deportes = '';
             if (document.getElementById("checkbox1").checked) {
@@ -429,7 +459,7 @@
                 deportes = deportes + 'Tenis';
             }
             alert('Los deportes seleccionados son: ' + deportes);
-        }
+        }/*
 
         /* CONTROL RADIO */
         function verificar() {
@@ -439,6 +469,26 @@
             if (document.getElementById('radio2').checked) {
                 alert('No eres mayor de edad y por lo tanto no puedes ingresar');
             }
+        }
+
+        /* CONTROL TEXTAREA */
+        function verificar() {
+            let nombre = document.getElementById('nombre').value;
+            let mail = document.getElementById('mail').value;
+            let comentarios = document.getElementById('comentarios').value;
+            alert(nombre + '\n' + mail + '\n' + comentarios);
+        }
+
+        /* EVENTOS onFOCUS Y onBLUR */
+        function verificar(control) {
+            if (control.value.length < 7 || control.value.length > 20) {
+                alert('cantidad de caracteres no valido en la clave(deben ser entre 7-20 caracteres)');
+            }
+        }
+
+        /* EVENTOS onMouseOver y onMouseOut */
+        function pintar(objeto, col) {
+            objeto.style.backgroundColor = col;
         }
     </script>
 </body>
