@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body onLoad="mostrarMensaje()">
 
     <script>
         /* INTRODUCCION
@@ -393,19 +393,16 @@
         <input type="button" value="confirmar">
     </form>
 
-    <table border="1"></table>
-        <tr>
-            <td onMouseOver="pintar(this,'#4c2a94')" onMouseOut="pintar(this,'#ff9300')">
-                <a href="http://www.outlook.com">Outlook</a>
-            </td>
-            <td onMouseOver="pintar(this,'#03c4fe')" onMouseOut="pintar(this,'#ff9300')">
-                <a href="http://www.yahoo.com">Yahoo</a>
-            </td>
-            <td onMouseOver="pintar(this,'#e6298c')" onMouseOut="pintar(this,'#ff9300')">
-                <a href="http://www.gmail.com">GMail</a>
-            </td>
-        </tr>
-    </table>
+    <form>
+        <input type="button" value="abrir ventana" onClick="abrirNuevaVentana()">
+    </form>
+
+    <button onClick="redireccionar()">Redireccionar a un servidor de mail</button>
+
+    <form>
+        <input type="button" value="abrir ventana" onClick="abrirVentana()">
+    </form>
+
 
     <script>
         /* FORMULARIOS Y EVENTOS */
@@ -486,9 +483,37 @@
             }
         }
 
-        /* EVENTOS onMouseOver y onMouseOut */
-        function pintar(objeto, col) {
-            objeto.style.backgroundColor = col;
+        /* EVENTO onMouseOver y onMouseOut */
+
+        /* EVENTO onLoad */
+        function mostrarMensaje() {
+            alert('LA PÁGINA FUE CARGADA')
+        }
+
+        /* OBJETO WINDOW */
+        function abrirNuevaVentana() {
+            let ventana = open('', '', 'width=600,height=300');
+        }
+
+        /* PROPIEDAD LOCATION DEL OBJETO WINDOW */
+        function redireccionar() {
+            let num;
+            num = Math.random() * 3;
+            num = parseInt(num);
+            if (num == 0) {
+                window.location = 'https://www.outlook.com';
+            }
+            if (num == 1) {
+                window.location = 'https://www.yahoo.com';
+            }
+            if (num == 2) {
+                window.location = 'https://www.gmail.com';
+            }
+        }
+
+        /* PROPIEDAD SCREEN DEL OBJETO WINDOW */ 
+        function abrirVentana() {
+            var ventana = open('', '', 'width=' + screen.availWidth + ',height=' + screen.availHeight / 2);
         }
     </script>
 </body>
