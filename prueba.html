@@ -511,9 +511,30 @@
             }
         }
 
-        /* PROPIEDAD SCREEN DEL OBJETO WINDOW */ 
+        /* PROPIEDAD SCREEN DEL OBJETO WINDOW */
         function abrirVentana() {
             var ventana = open('', '', 'width=' + screen.availWidth + ',height=' + screen.availHeight / 2);
+        }
+
+        /*ARRAY: METODO SPLICE*/
+
+        let vec = [0, 1, 2, 3, 9, 2, 6, 6, 8, 2]; /* definicion del vector */
+        document.write('Vector original: <br>');
+        for (let f = 0; f < vec.length; f++) { /* recorre el arreglo y lo muestra  */
+            document.write(vec[f] + ' ');
+        }
+        let indice = 0; /* variable para recorrer el arreglo */
+        
+        for (let indice = 0; indice < vec.length; indice++) {
+            if (vec[indice] == 2) {
+                vec.splice(indice, 1, 1, 1); 
+                /* estamos indicando que a partir de la componente de la posición del indice se proceda a eliminar 1 elemento, y se agreguen
+                indice++; /* despues de cada iteracion incrementamos el indice */
+            }
+        }
+        document.write('<br>Vector con valores borrados y agregados: <br>');
+        for (let f = 0; f < vec.length; f++) {
+            document.write(vec[f] + ' ');
         }
     </script>
 </body>
